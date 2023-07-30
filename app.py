@@ -7,7 +7,7 @@ import traceback
 app = Flask(__name__)
 
 # Set up OpenAI API key
-openai.api_key = "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"
+openai.api_key = "Your Open api key"
 
 # Prompt to define table structure for GPT
 

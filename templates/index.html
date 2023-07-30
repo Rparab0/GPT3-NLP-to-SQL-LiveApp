@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>NLP to SQL App</title>
+    <link rel="stylesheet" type="text/css" href="static/styles.css" />
+  </head>
+  <body>
+    <h1>NLP to SQL App</h1>
+    <div class="container">
+      <form
+        id="convert-form"
+        action="/convert"
+        method="post"
+        enctype="multipart/form-data"
+      >
+        <label for="text">NLP Text:</label>
+        <textarea id="text" name="text" rows="4" cols="50"></textarea>
+        <br />
+        <label for="csv">CSV File:</label>
+        <input type="file" id="csv" name="csv" />
+        <br />
+        <div id="convert-button-container">
+          <input
+            type="submit"
+            value="Create Query and apply changes"
+            id="convert-button"
+          />
+          <div id="loading-overlay">
+            <div class="loading-spinner"></div>
+          </div>
+        </div>
+      </form>
+      <div class="sql-query-container">
+        <h2>SQL Query:</h2>
+        <pre id="sql-query" class="typing"></pre>
+      </div>
+    </div>
+    <h2>Results:</h2>
+    <pre id="results"></pre>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="static/script.js"></script>
+  </body>
+</html>
